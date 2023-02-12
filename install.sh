@@ -43,8 +43,8 @@ get_arch() {
 } 
 get_arch
 
-FILE="a2ctl-"$CLI_VERSION"-"$OS"-"$ARCH".tar.gz"
-SHA_FILE="a2ctl-"$CLI_VERSION"-"$OS"-"$ARCH".sha256"
+FILE="a2ctl-"$(get_stripped_release)"-"$OS"-"$ARCH".tar.gz"
+SHA_FILE="a2ctl-"$(get_stripped_release)"-"$OS"-"$ARCH".sha256"
 BIN_URL=$DOWNLOAD_URL"/"$CLI_VERSION"/"$FILE
 SHA_FILE_URL=$DOWNLOAD_URL"/"$CLI_VERSION"/"$SHA_FILE
 CTL="a2ctl"
